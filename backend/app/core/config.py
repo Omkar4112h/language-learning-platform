@@ -20,7 +20,10 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440  # 24 hours
 
     # Frontend and CORS
-    CORS_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001"
+    CORS_ORIGINS: List[str] = [
+        "http://localhost:3000",
+        "https://language-learning-platform-ny7rdmb8n-omkar4112hs-projects.vercel.app",
+    ]
     
     # Supported Languages
     SUPPORTED_LANGUAGES: List[str] = ["English", "German", "Spanish", "Hindi", "French", "Japanese"]
@@ -54,8 +57,7 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str = ""
 
     def get_cors_origins(self) -> List[str]:
-        """Return CORS origins as a normalized list from comma-separated env value."""
-        return [origin.strip() for origin in self.CORS_ORIGINS.split(",") if origin.strip()]
+        return self.CORS_ORIGINS
     
     class Config:
         env_file = ".env"
