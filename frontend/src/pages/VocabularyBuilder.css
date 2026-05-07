@@ -1,0 +1,270 @@
+.vocabulary-page .vocab-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.vocab-controls .control-group {
+  flex: 1;
+  min-width: 120px;
+}
+
+.mode-toggle {
+  display: flex;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: var(--transition);
+}
+
+.mode-btn:first-child {
+  border-right: 1px solid var(--gray-200);
+}
+
+.mode-btn.active {
+  background: var(--primary-500);
+  color: white;
+}
+
+.mode-btn:hover:not(.active) {
+  background: var(--gray-50);
+}
+
+/* Vocab Card */
+.vocab-card {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vocab-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.vocab-progress span {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+.vocab-progress .progress-bar {
+  flex: 1;
+}
+
+/* Word Display */
+.word-display {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray-100);
+  margin-bottom: 1.5rem;
+}
+
+.word-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-500);
+}
+
+.word-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 0.5rem 0;
+}
+
+.word-example {
+  font-style: italic;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+/* Quiz Section */
+.quiz-section {
+  text-align: left;
+}
+
+.quiz-input {
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.answer-feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.answer-feedback.correct {
+  background: var(--success-50);
+  color: var(--success-700);
+}
+
+.answer-feedback.incorrect {
+  background: var(--error-50);
+  color: var(--error-700);
+}
+
+.quiz-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* Learn Section */
+.learn-section {
+  padding: 1rem 0;
+}
+
+.translation-reveal {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.translation-shown {
+  text-align: center;
+}
+
+.translation-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-500);
+}
+
+.translation-shown h3 {
+  font-size: 1.75rem;
+  color: var(--primary-600);
+  margin-top: 0.25rem;
+}
+
+.learn-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+}
+
+.empty-state svg {
+  font-size: 3rem;
+  color: var(--gray-300);
+  margin-bottom: 1rem;
+}
+
+.empty-state p {
+  color: var(--gray-500);
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .vocab-controls {
+    flex-direction: column;
+  }
+  
+  .vocab-controls .control-group {
+    width: 100%;
+  }
+  
+  .word-text {
+    font-size: 1.75rem;
+  }
+}
+
+/* Hint Section */
+.hint-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--gray-200);
+}
+
+.btn-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-hint:hover {
+  background: linear-gradient(135deg, #fde68a, #fcd34d);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.hint-display {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 1px solid #fcd34d;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.hint-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #92400e;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.hint-content {
+  margin-top: 0.5rem;
+}
+
+.hint-sentence {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #78350f;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-style: italic;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.hint-info {
+  font-size: 0.875rem;
+  color: #a16207;
+  text-align: center;
+}
+
+.hint-info strong {
+  color: #78350f;
+  text-transform: capitalize;
+}

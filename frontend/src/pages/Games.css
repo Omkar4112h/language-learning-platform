@@ -1,0 +1,518 @@
+/* Games Page Styles */
+.games-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.games-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.games-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.games-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.language-selector {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.language-selector label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.language-selector select {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.language-selector select:hover {
+  border-color: #2980b9;
+}
+
+/* Games Grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.game-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--game-color);
+}
+
+.game-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background: var(--game-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.game-card h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.game-card p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.game-reward {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #f39c12, #e74c3c);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Game Container */
+.game-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.game-header h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #ecf0f1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-back:hover {
+  background: #bdc3c7;
+}
+
+.score {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3498db;
+  background: #e8f4fc;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Word Scramble Styles */
+.game-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.scramble-word {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #e74c3c;
+  letter-spacing: 0.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fdf2f2;
+  border-radius: 12px;
+}
+
+.translation-hint {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.hint {
+  text-align: center;
+  color: #f39c12;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.feedback {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.feedback.correct {
+  background: #d4edda;
+  color: #155724;
+}
+
+.feedback.wrong {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.game-content input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+.game-content input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.game-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-hint, .btn-submit {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-hint {
+  background: #f39c12;
+  color: white;
+}
+
+.btn-hint:hover:not(:disabled) {
+  background: #d68910;
+}
+
+.btn-hint:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn-submit {
+  background: #3498db;
+  color: white;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+.btn-submit:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Game Over Screen */
+.game-over {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-over h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.final-score {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
+.xp-earned {
+  font-size: 1.8rem;
+  color: #f39c12;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+/* Memory Match Styles - 10 pairs (20 cards) */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.memory-card {
+  aspect-ratio: 1;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.memory-card.flipped .card-inner,
+.memory-card.matched .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-front {
+  background: linear-gradient(135deg, #3498db, #9b59b6);
+  color: white;
+  font-size: 2rem;
+}
+
+.card-back {
+  background: white;
+  color: #2c3e50;
+  transform: rotateY(180deg);
+  border: 3px solid #3498db;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  word-break: break-word;
+}
+
+.memory-card.matched .card-back {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+/* Hangman Styles */
+.hangman-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hangman-svg {
+  max-width: 300px;
+  margin: 0 auto 1rem;
+}
+
+.gallows {
+  stroke: #34495e;
+  stroke-width: 4;
+  fill: none;
+}
+
+.hangman-part {
+  stroke: #e74c3c;
+  stroke-width: 4;
+  fill: none;
+}
+
+.hangman-part circle {
+  fill: none;
+}
+
+.hint-text {
+  color: #f39c12;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.original-word {
+  color: #9b59b6;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.word-display {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  color: #2c3e50;
+  margin: 1.5rem 0;
+  font-family: monospace;
+}
+
+.alphabet-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.letter-btn {
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.letter-btn:hover:not(:disabled) {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.letter-btn.correct {
+  background: #2ecc71;
+  color: white;
+  border-color: #2ecc71;
+}
+
+.letter-btn.wrong {
+  background: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+}
+
+.letter-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .games-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .game-card {
+    padding: 1.5rem;
+  }
+
+  .scramble-word {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .memory-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .alphabet-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .word-display {
+    font-size: 1.8rem;
+  }
+}

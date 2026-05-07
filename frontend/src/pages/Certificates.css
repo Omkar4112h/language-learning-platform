@@ -1,0 +1,176 @@
+.certificates-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.xp-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--primary-50);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+}
+
+.xp-status span:first-child {
+  color: var(--gray-600);
+}
+
+.xp-value {
+  font-weight: 700;
+  color: var(--primary-700);
+}
+
+/* Info Card */
+.certificates-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary-50), white);
+  border: 1px solid var(--primary-100);
+}
+
+.info-icon {
+  font-size: 2rem;
+  color: var(--primary-500);
+  flex-shrink: 0;
+}
+
+.info-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 0.25rem;
+}
+
+.info-content p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+/* Certificates Grid */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.certificate-card {
+  text-align: center;
+  padding: 1.5rem;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.certificate-card.earned {
+  border-color: var(--success-200);
+  background: linear-gradient(135deg, var(--success-50), white);
+}
+
+.certificate-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.level-badge {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.level-green { background: #D1FAE5; color: #065F46; }
+.level-blue { background: #DBEAFE; color: #1E40AF; }
+.level-purple { background: #EDE9FE; color: #5B21B6; }
+.level-orange { background: #FEF3C7; color: #92400E; }
+.level-red { background: #FEE2E2; color: #991B1B; }
+.level-gold { background: #FEF3C7; color: #78350F; }
+
+.earned-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--success-100);
+  color: var(--success-700);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cert-level-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 0.5rem;
+}
+
+.cert-requirement {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  margin-bottom: 1rem;
+}
+
+.cert-progress {
+  margin-bottom: 1rem;
+}
+
+.cert-progress .progress-bar {
+  margin-bottom: 0.5rem;
+}
+
+.progress-text {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.cert-actions {
+  margin-top: 1rem;
+}
+
+.cert-actions .btn {
+  width: 100%;
+}
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+}

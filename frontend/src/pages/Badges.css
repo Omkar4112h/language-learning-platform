@@ -1,0 +1,144 @@
+.badges-page {
+  animation: fadeIn 0.3s ease;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.badge-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--primary-50);
+  color: var(--primary-700);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.badge-summary svg {
+  font-size: 1.25rem;
+}
+
+/* Progress Card */
+.badges-progress {
+  margin-bottom: 2rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+/* Badges Grid */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.badge-item {
+  text-align: center;
+  padding: 1.5rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.badge-item.earned {
+  border: 2px solid var(--primary-200);
+  background: linear-gradient(135deg, var(--primary-50), white);
+}
+
+.badge-item.locked {
+  opacity: 0.7;
+}
+
+.badge-item.earned:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.badge-icon-container {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.badge-item.earned .badge-icon-container {
+  background: linear-gradient(135deg, var(--primary-100), var(--primary-50));
+}
+
+.badge-item.locked .badge-icon-container {
+  background: var(--gray-100);
+}
+
+.badge-icon {
+  font-size: 2.5rem;
+}
+
+.locked-icon {
+  color: var(--gray-400);
+  font-size: 1.5rem;
+}
+
+.badge-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 0.5rem;
+}
+
+.badge-item.locked .badge-name {
+  color: var(--gray-500);
+}
+
+.badge-description {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  line-height: 1.4;
+}
+
+.earned-label {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--success-100);
+  color: var(--success-700);
+  border-radius: var(--radius-sm);
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .page-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
