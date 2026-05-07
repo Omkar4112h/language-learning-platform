@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     
     # Database
-    DATABASE_URL: str = "postgresql://postgres:tiger@localhost:5432/language_learning_db"
+    DATABASE_URL: str = "postgresql://postgres:tiger@localhost:5432/linguaquest_db"
     
     # JWT Settings
     SECRET_KEY: str = "your-super-secret-key-change-in-production-2024"

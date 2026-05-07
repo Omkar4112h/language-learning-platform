@@ -9,10 +9,16 @@ from contextlib import asynccontextmanager
 
 from app.core.config import settings
 from app.core.database import engine, Base
+from app.models.user import User
 from app.api.routes import auth, users, sessions, vocabulary, translation, correction, conversation, certificates, badges, games, missions
 from app.core.database import Base, engine
 from fastapi import FastAPI
 from app.api.routes.ai import router as ai_router
+import app.models.user
+import app.models.session
+import app.models.vocabulary
+import app.models.badge
+import app.models.certificate
 
 
 
