@@ -44,7 +44,10 @@ app.include_router(ai_router, prefix="/api/ai", tags=["AI"])
 # CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.get_cors_origins(),
+    allow_origins=[
+        "http://localhost:3000",
+        "https://language-learning-platform-m0p0ictxy-omkar4112hs-projects.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
