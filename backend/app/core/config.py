@@ -7,7 +7,6 @@ from typing import List
 import os
 
 class Settings(BaseSettings):
-    # Application
     APP_NAME: str = "LangLearn"
     DEBUG: bool = True
     
@@ -63,4 +62,3 @@ class Settings(BaseSettings):
         env_file = ".env"
 
 settings = Settings()
-print(settings.DATABASE_URL)
